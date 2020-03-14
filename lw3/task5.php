@@ -1,10 +1,14 @@
 <?php
 $email = ($_GET['email']);
-$email = preg_replace("/[\/|\\\<>?*\":]/", "", $email);
-$email = preg_replace("/[\.\s]*$/", "", $email );
-$file = "data/{$email}.txt";
-$dataString = file_get_contents($file);
-$dataArray = unserialize($dataString);
+$fileName = preg_replace("/[\/|\\\<>?*\":]/", "", $email);
+$fileName = preg_replace("/[\.\s]*$/", "", $fileName );
+$file = "data/{$fileName}.txt";
+$dataString = file_get_contents($file); //Читает содержимое файла в строку
+/*$dataString = preg_replace(['/(first_name)/U', '/(last_name)/U', '/(email)/U', '/(age)/U'],
+    ['First name', 'Last name', 'Email', 'Age'], $dataString);
+var_dump($dataString);
+echo '<br>';*/
+$dataArray = unserialize($dataString); //трансформирует строку в ассоциативный массив
 if (array_key_exists("first_name", $dataArray))
     echo("First name: " . $dataArray['first_name'] . '<br>');
 else
@@ -21,17 +25,4 @@ if (array_key_exists("age", $dataArray))
     echo("Age: " . $dataArray['age'] . '<br>');
 else
     echo('Age: <br>');
-$mapping = [
-    'first_name' => 'First name',
-    'last_name' => 'Last name',
-    'email' => 'Email',
-    'age' => 'Age',
-];
-foreach ($mapping as $key => $value) {
-    if (!isset($dataArray[$key])) {
-        echo "$value: <br/>";
-        continue;
-    }
-    echo "$value: {$dataArray[$key]} <br/>";
-}
 ?>

@@ -1,0 +1,147 @@
+.main_block
+{
+  display: block;
+  height: 1171px;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.top_block
+{
+  display: block;
+  width: 960px;
+  height: 350px;
+  /*float: right;/*элемент должен быть взят из нормального потока и помещен вдоль левой или правой стороны его контейнера,
+  где текст и встроенные элементы будут обтекать его*/
+  margin: 0 0 50px;
+}
+
+.quote
+{
+  display: block;
+  width: 570px;
+  height: 300px;
+  margin: 50px 0 0;
+  float: right;
+  background: url('../images/quotes.png') no-repeat;/*смещение относ-о лев.верх.угла контейнера*/
+  }
+
+.blockquote
+{
+  display: block;
+  text-align: left;
+  font: 28px/45px Georgia;
+  font-style: italic;
+  margin: 70px 0 12px 57px;
+  color: #848484;
+}
+
+.cite
+{
+  display: block;
+  text-align: left;
+  font: normal 600 16px/1 'Open Sans', sans-serif;
+  margin: 0 0 0 57px;
+  color: #000;
+}
+
+.clear
+{
+  clear: both;
+}
+
+.value
+{
+  text-decoration:underline;
+}
+
+.name_heading
+{
+  text-align: left;
+  font: 48px/1 'Open Sans', sans-serif;
+  font-weight: bold;
+  margin: -6px 0;
+  color: #333;
+}
+
+.list_heading
+{
+  display: block;
+  text-align: left;
+  font-style: normal;
+  font: 24px/1 'Open Sans', sans-serif;
+  margin: 0 0 15px 0;
+  color: #15a98c;
+}
+
+.main_text
+{
+  display: block;
+  width: 570px;
+  height: 771px;
+  margin: 0;
+  float: right;
+}
+
+.favourites
+{
+  display: block;
+  width: 330px;
+  height: 771px;
+  margin: 0;
+  float: left;
+}
+
+.icon_rectangle
+{
+  margin: 24px 0 45px;
+}
+
+/*.li
+{
+  margin-left: -18px;
+  font: 19px/37px Georgia;
+  color: #555;
+}*/
+
+.text
+{
+  font: 19px/34px Georgia;
+  color: #555;
+  margin: 0 0 54px;
+}
+
+.hobbies_heading
+{
+  font: 48px/1 'Open Sans', sans-serif;
+  margin: 0 0 20px;
+}
+
+.favourites ul,
+.favourites ol
+{
+  margin: 0 0 54px 0;
+}
+
+.reference
+{
+  font: 19px/1.2 Georgia;
+  text-decoration: none;
+  color: #15a98c;
+}
+
+.photo
+{
+  display: block;
+  width: 330px;
+  height: 350px;
+  margin: 0;
+  float: left;
+}
+
+.list ul > li, ol > li
+{
+  font: 19px/38px Georgia;
+  color: #555;
+  margin: 0 0 0 -16px;
+}

@@ -1,22 +1,34 @@
 <?php
-if (!isset($_GET['identifier']))
-    exit('Нет параметра "identifier"');
-$identifier = $_GET['identifier'];
-if (preg_match('/^[A-Za-z][A-Za-z0-9]*$/', $identifier))
-    echo 'Это идентификатор';
+header("Content-Type: text/plain");
+function getGETParameter(string $name): ?string
+{
+    return (!empty($_GET[$name])) ? (string) $_GET[$name]: null;
+}
+function correct(string $name): ?string
+{
+    return preg_match('/^[A-Za-z][A-Za-z0-9]*$/', $name) ? (string) 'Это идентификатор': null;
+}
+function lettersAndDigits(string $name): ?string
+{
+    return preg_match('/^[A-Za-z][A-Za-z0-9]*[^A-Za-z0-9]/', $name) ? (string)'Идентификатор может содержать только цифры и буквы' : null;
+}
+function firstLetter(string $name): ?string
+{
+    return preg_match('/^[^A-Za-z][A-Za-z0-9]*$/', $name) ? (string)'Идентификатор должен начинаться с буквы' : null;
+}
+function firstLetterLettersAndDigits(string $name): ?string
+{
+    return preg_match('/^[^A-Za-z][A-Za-z0-9]*[^A-Za-z0-9]/', $name) ? (string)'Идентификатор должен начинаться с буквы, идентификатор может содержать только цифры и буквы' : null;
+}
+$identifier = getGETParameter('identifier');
+if(!is_null ($identifier))//Проверяет, является ли значение данной переменной равным NULL
+{
+    echo correct($identifier);
+    echo lettersAndDigits($identifier);
+    echo firstLetter($identifier);
+    echo firstLetterLettersAndDigits($identifier);
+}
 else
 {
-    if (preg_match('/^[A-Za-z][A-Za-z0-9]*[^A-Za-z0-9]/', $identifier))
-        echo 'Идентификатор должен содержать только буквы и цифры';
-    else
-    {
-        if (preg_match('/^[^A-Za-z][A-Za-z0-9]*$/', $identifier))
-            echo 'Первый символ должна быть буква';
-        else
-        {
-            if(preg_match('/^[^A-Za-z][A-Za-z0-9]*[^A-Za-z0-9]/', $identifier))
-                echo 'Первый символ должна быть буква, идентификатор должен содержать только буквы и цифры';
-        }
-    }
+    echo('идентификатор не задан');
 }
-?>

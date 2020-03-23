@@ -1,37 +1,35 @@
 <?php
-
 function getGETParameter(string $name): ?string
 {
     return (!empty($_GET[$name])) ? (string)$_GET[$name] : null;
 }
-
-function extractUserData(array $parameterNames): array
+function putUserDataInArray(array $simpleArray): array
 {
-    $data = [];
-    foreach ($parameterNames as $value)
+    $associativeArray = [];
+    foreach ($simpleArray as $key)
     {
-        $val = getGETParameter($value);
-        if (!is_null($val)) {
-            $data[$value] = $val;
+        $value = getGETParameter($key);
+        if (!is_null($value))
+        {
+            $associativeArray[$key] = $value;
         }
     }
-
-    return $data;
+    return $associativeArray;
 }
 
-function filterFileName(string $fileName): string
+function filterFileName(string $email): string
 {
-    $fileName = preg_replace("/[\/|\\\<>?*\"\:]/", "", $fileName);
+    $fileName = preg_replace("/[\/|\\\<>?*\"\:]/", "", $email);
     $fileName = preg_replace("/[\.\s]*$/", "", $fileName);
     return $fileName;
 }
 
-function saveFile(string $dirName, string $fileName, array $arrayName)
+function saveFile(string $dir, string $fileName, array $associativeArray)
 {
-    if(!is_dir($dirName))
+    if(!is_dir($dir))
     {
-        mkdir($dirName, 0777);
+        mkdir($dir, 0777);
     }
-    $dataString = json_encode($arrayName); //возвращает строку, закодированную json
-    file_put_contents("{$dirName}/{$fileName}.txt", $dataString);
+    $dataString = json_encode($associativeArray); //возвращает строку, закодированную json
+    file_put_contents("{$dir}/{$fileName}.txt", $dataString);
 }

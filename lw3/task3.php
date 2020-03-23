@@ -3,44 +3,62 @@ function getGETParameter(string $name): ?string
 {
     return (!empty($_GET[$name])) ? (string) $_GET[$name]: null;
 }
-function strengthPasswordEstimating(string $name): ?int
+
+function chechWhetherPasswordIsCorrect(string $name): bool
 {
-    $security = 0; //надежность пароля
+   return preg_match('/^[A-Za-z0-9]+$/', $name);
+}
+
+function countDigits(string $name): int //посчитать цифры в строке
+{
     $length = strlen($name);
-    $digit = 0; //количество цифр в пароле
-    $capital = 0;//количество заглавных букв в пароле
-    $small = 0; //количество прописных букв в пароле
+    $digits = 0; //количество цифр в пароле
     for ($i = 0; $i < $length; $i++)
     {
         $character = ord($name[$i]);
-        if($character <= 57 && $character >= 48)
+        if ($character <= 57 && $character >= 48)
         {
-            $digit++;
-        }
-        elseif($character <= 90 && $character >= 65)
-        {
-            $capital++;
-        }
-        elseif($character <= 122 && $character >= 97)
-        {
-            $small++;
+            $digits++;
         }
     }
-    $security += 4 * $length;
-    $security += 4 * $digit;
-    $security += ($length - $capital) * 2;
-    $security += ($length - $small) * 2;
-    if ($length === $small + $capital)
+    return $digits;
+}
+
+function countCapitalLetters(string $name): int //посчитать заглавные буквы в строке
+{
+    $length = strlen($name);
+    $capitalLetters = 0; //количество цифр в пароле
+    for ($i = 0; $i < $length; $i++)
     {
-        $security -= $length;
+        $character = ord($name[$i]);
+        if ($character <= 90 && $character >= 65)
+        {
+            $capitalLetters++;
+        }
     }
-    if ($length == $digit)
+    return $capitalLetters;
+}
+
+function countSmallLetters(string $name): int //посчитать прописные буквы в строке
+{
+    $length = strlen($name);
+    $smallLetters = 0; //количество цифр в пароле
+    for ($i = 0; $i < $length; $i++)
     {
-        $security -= $length;
+        $character = ord($name[$i]);
+        if ($character <= 122 && $character >= 97)
+        {
+            $smallLetters++;
+        }
     }
+    return $smallLetters;
+}
+
+function countRepeats(string $name): int //посчитать кол-во повторяющихся символов
+{
     $duplicate = count_chars($name, 1); /*Возвращает массив:
-символ строки => количество вхождений в строку*/
-    $repeat = 0; //количество повторяющихся символов в пароле
+    символ строки => количество вхождений в строку*/
+    $repeat = 0; //количество повторяющихся символов в строке
     foreach($duplicate as $code => $count)
     {
         if ($count >= 2)
@@ -48,22 +66,46 @@ function strengthPasswordEstimating(string $name): ?int
             $repeat += $count;
         }
     }
-    $security -= $repeat;
-    return $security;
+    return $repeat;
 }
+
+function calculatePasswordStrength(string $name): int //посчитать надежность пароля
+{
+    $strength = 0; //надежность пароля
+    $length = strlen($name);
+    $digits = countDigits($name);
+    $capitalLetters = countCapitalLetters($name);
+    $smallLetters = countSmallLetters($name);
+    $strength += 4 * $length;
+    $strength += 4 * $digits;
+    if($capitalLetters >= 1)
+    {
+        $strength += ($length - $capitalLetters) * 2;
+    }
+    if($smallLetters >= 1)
+    {
+        $strength += ($length - $smallLetters) * 2;
+    }
+    if ($length === $smallLetters + $capitalLetters)
+    {
+        $strength -= $length;
+    }
+    if ($length === $digits)
+    {
+        $strength -= $length;
+    }
+    $repeats = countRepeats($name);
+    $strength -= $repeats;
+    return $strength;
+}
+
 $password = getGETParameter('password');
-if(!is_null ($password))//Проверяет, является ли значение данной переменной равным NULL
+if(!$password)//Проверяет, является ли значение данной переменной не равным NULL
 {
-    if (preg_match('/^[A-Za-z0-9]+$/', $password))
-    {
-        echo(strengthPasswordEstimating($password));
-    }
-    else
-    {
-        echo('пароль некорректный');
-    }
+    exit('Пароль не передан');
 }
-else
+if (!chechWhetherPasswordIsCorrect($password))
 {
-    echo('Пароль не передан');
+    exit('Пароль некорректный');
 }
+echo calculatePasswordStrength($password);

@@ -1,34 +1,49 @@
 <?php
-header("Content-Type: text/plain");
+
 function getGETParameter(string $name): ?string
 {
     return (!empty($_GET[$name])) ? (string) $_GET[$name]: null;
 }
-function correct(string $name): ?string
+
+function checkCorrectIdentifier(string $name): bool
 {
-    return preg_match('/^[A-Za-z][A-Za-z0-9]*$/', $name) ? (string) 'Это идентификатор': null;
+    return preg_match('/^[A-Za-z][A-Za-z0-9]*$/', $name);
 }
-function lettersAndDigits(string $name): ?string
+
+function AtLeastOneNotLetterOrDigit(string $name): bool
 {
-    return preg_match('/^[A-Za-z][A-Za-z0-9]*[^A-Za-z0-9]/', $name) ? (string)'Идентификатор может содержать только цифры и буквы' : null;
+    return preg_match('/^[A-Za-z][A-Za-z0-9]*[^A-Za-z0-9]/', $name);
 }
-function firstLetter(string $name): ?string
+
+function FirstNotLetter(string $name): bool
 {
-    return preg_match('/^[^A-Za-z][A-Za-z0-9]*$/', $name) ? (string)'Идентификатор должен начинаться с буквы' : null;
+    return preg_match('/^[^A-Za-z][A-Za-z0-9]*$/', $name);
 }
-function firstLetterLettersAndDigits(string $name): ?string
+
+function firstNotLetterAndFurther(string $name): bool
 {
-    return preg_match('/^[^A-Za-z][A-Za-z0-9]*[^A-Za-z0-9]/', $name) ? (string)'Идентификатор должен начинаться с буквы, идентификатор может содержать только цифры и буквы' : null;
+    return preg_match('/^[^A-Za-z][A-Za-z0-9]*[^A-Za-z0-9]/', $name);
 }
+
 $identifier = getGETParameter('identifier');
-if(!is_null ($identifier))//Проверяет, является ли значение данной переменной равным NULL
+if(!$identifier)//Проверяет, является ли значение данной переменной равным NULL
 {
-    echo correct($identifier);
-    echo lettersAndDigits($identifier);
-    echo firstLetter($identifier);
-    echo firstLetterLettersAndDigits($identifier);
+    exit('идентификатор не задан');
 }
-else
+
+if(checkCorrectIdentifier($identifier))
 {
-    echo('идентификатор не задан');
+    echo 'Это идентификатор';
+}
+elseif(AtLeastOneNotLetterOrDigit($identifier))
+{
+    echo 'Идентификатор может содержать только цифры и буквы';
+}
+elseif(FirstNotLetter($identifier))
+{
+    echo 'Идентификатор должен начинаться с буквы';
+}
+elseif (firstNotLetterAndFurther($identifier))
+{
+    echo 'Идентификатор должен начинаться с буквы, остальные символы должны быть буквы и цифры';
 }

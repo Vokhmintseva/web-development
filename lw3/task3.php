@@ -4,7 +4,7 @@ function getGETParameter(string $name): ?string
     return (!empty($_GET[$name])) ? (string) $_GET[$name]: null;
 }
 
-function chechWhetherPasswordIsCorrect(string $name): bool
+function checkWhetherPasswordIsCorrect(string $name): bool
 {
    return preg_match('/^[A-Za-z0-9]+$/', $name);
 }
@@ -100,11 +100,11 @@ function calculatePasswordStrength(string $name): int //посчитать на�
 }
 
 $password = getGETParameter('password');
-if(!$password)//Проверяет, является ли значение данной переменной не равным NULL
+if(is_null($password))//Проверяет, является ли значение данной переменной не равным NULL
 {
     exit('Пароль не передан');
 }
-if (!chechWhetherPasswordIsCorrect($password))
+if (!checkWhetherPasswordIsCorrect($password))
 {
     exit('Пароль некорректный');
 }

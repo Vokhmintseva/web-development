@@ -26,20 +26,20 @@ function firstNotLetterAndFurther(string $name): bool
 }
 
 $identifier = getGETParameter('identifier');
-if(!$identifier)//Проверяет, является ли значение данной переменной равным NULL
+if (is_null($identifier))//Проверяет, является ли значение данной переменной равным NULL
 {
     exit('идентификатор не задан');
 }
 
-if(checkCorrectIdentifier($identifier))
+if (checkCorrectIdentifier($identifier))
 {
     echo 'Это идентификатор';
 }
-elseif(AtLeastOneNotLetterOrDigit($identifier))
+elseif (AtLeastOneNotLetterOrDigit($identifier))
 {
     echo 'Идентификатор может содержать только цифры и буквы';
 }
-elseif(FirstNotLetter($identifier))
+elseif (FirstNotLetter($identifier))
 {
     echo 'Идентификатор должен начинаться с буквы';
 }

@@ -1,0 +1,467 @@
+.body
+{
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote
+{
+  position: absolute;
+  width: 570px;
+  top: 262px;
+  left: 870px;
+  margin: 0;
+}
+
+.blockquote
+{
+  text-align: left;
+  font: italic 28px/43px Georgia;
+  color: #f5f5f5;
+  margin: 23px 0 13px 2px;
+}
+
+.cite
+{
+  text-align: left;
+  font: 600 16px/1 'Open Sans', sans-serif;
+  color: #f5f5f5;
+  margin: 0 0 0 5px;
+}
+
+.clear
+{
+  clear: both;
+}
+
+.photo
+{
+  position: absolute;
+  width: 330px;
+  height: 350px;
+  top: 260px;
+  left: 480px;
+  border-radius: 5px;
+}
+
+.name_heading
+{
+  text-align: left;
+  font: 700 48px/1 'Open Sans', sans-serif;
+  color: #333;
+  margin: 40px 0 28px -2px;
+}
+
+.main_text
+{
+  width: 570px;
+  margin: 0;
+  float: left;
+}
+
+.favourites
+{
+  width: 330px;
+  margin: 207px 61px 0 479px;
+  float: left;
+}
+
+.rectangle
+{
+  width: 60px;
+  height: 7px;
+  margin: 0 0 43px 0;
+  background: url('../images/rectangle.png') no-repeat;
+}
+
+.text
+{
+  font: 19px/32px Georgia;
+  color: #555;
+  margin: 0 0 45px 0;
+}
+
+.hobbies_heading
+{
+  font: 400 36px/1 'Open Sans', sans-serif;
+  color: #333;
+  margin: 0 0 18px -2px;
+}
+
+.favourites ul,
+.favourites ol
+{
+  margin: 0 0 45px -1px;
+}
+
+.reference
+{
+  display: block;
+  font: 19px/1.2 Georgia;
+  color: #15a98c;
+  margin: 46px 0 0 0;
+}
+
+.reference:after
+{
+  content: "\00A0\2192";
+  display: inline-block;
+}
+
+.list li,
+.list-numeric li
+{
+  text-align: left;
+  font: 19px/36px Georgia;
+  color: #555;
+  margin: 0 0 0 -16px;
+}
+
+.list-numeric li
+{
+  margin-left: -18px;
+}
+
+.menu
+{
+  margin: 0 920px 0 480px;
+}
+
+.menu ul
+{
+  width: 540px;
+  height: 50px;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.menu ul > li
+{
+  float: left;
+}
+
+.icon
+{
+  display: block;
+  height: 50px;
+  width: 140px;
+  font: 19px/51px Georgia;
+  color: #555;
+  text-decoration: none;
+}
+
+.icon:hover,
+.hobbies:hover,
+.favourite_movies:hover
+{
+  background: #15a98c;
+  color: #f5f5f5;
+}
+
+.icon:before
+{
+  content: url(../images/about_me_icon.png);
+  float: left;
+  margin: 1px 12px 0 21px;
+}
+
+.icon:hover:before
+{
+  content: url(../images/about_me_icon_active.png);
+}
+
+.hobbies
+{
+  width: 162px;
+}
+
+.hobbies:before
+{
+  content: url(../images/hobby_icon.png);
+  float: left;
+  margin: 2px 10px 0 20px;
+}
+
+.hobbies:hover:before
+{
+  content: url(../images/hobby_icon_active.png);
+}
+
+.favourite_movies
+{
+  width: 220px;
+}
+
+.favourite_movies:before
+{
+  content: url(../images/video_icon.png);
+  float: left;
+  margin: 0px 10px 0 18px;
+}
+
+.favourite_movies:hover:before
+{
+  content: url(../images/video_icon_active.png);
+}
+
+.nature
+{
+  background: url('../images/nature.png') no-repeat;
+  width: 1920px;
+  height: 402px;
+  filter: brightness(50%);
+}
+
+.four_movies_heading
+{
+  margin: 0 0 36px 0;
+}
+
+.four_movies
+{
+  width: 1560px;
+  height: 1002px;
+  padding: 39px 0 0 360px;
+  margin: 62px 0 48px 0;
+  background-color: #f5f5f5;
+}
+
+.film
+{
+  float: left;
+  width: 285px;
+  margin: 0 20px 0 0;
+}
+
+.suits
+{
+  float: left;
+  width: 285px;
+  margin: 0;
+  border-radius: 25px;
+}
+
+.movies_description
+{
+  height: 541px;
+  font: 16px/28px Georgia;
+  color: #555;
+}
+
+.button
+{
+  display: block;
+  width: 220px;
+  height: 52px;
+  font: 19px/1 Georgia;
+  color: #15a98c;
+  background-color: white;
+  margin: 0 0 0 481px;
+  border: 2px solid #15a98c;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover
+{
+  background: #15a98c;
+  color: #f5f5f5;
+}
+
+.film_image
+{
+  width: 285px;
+  height: 190px;
+  border-radius: 5px;
+}
+
+.favourites_heading
+{
+  color: #15a98c;
+  text-align: left;
+  font: 600 24px/1 'Open Sans', sans-serif;
+  margin: 0 0 17px;
+}
+
+.movies_heading
+{
+  margin: 0 0 16px 1px;
+}
+
+.name_of_the_movie
+{
+  font: 700 22px/1 'Open Sans', sans-serif;
+  margin: 24px 0 22px -2px;
+  color: #333;
+}
+
+.form
+{
+  margin: 45px 255px 0 689px;
+}
+
+.write_me_heading
+{
+  font: 300 36px/1 'Open Sans', sans-serif;
+  color: #333;
+  padding: 0 10px 0 13px;
+}
+
+.heading_with_lines
+{
+  text-align: center;
+  margin: 0 0 0 -14px;
+}
+
+.heading_with_lines > span
+{
+  position: relative;
+}
+
+.heading_with_lines > span:before,
+.heading_with_lines > span:after
+{
+  content: "";
+  position: absolute;
+  top: 50%; /*расстояние между верхней гранью элемента и верхней гранью родительского контейнера*/
+  width: 200px;
+  height: 1px;
+  background: #c2c2c2;
+}
+
+.heading_with_lines > span:before
+{
+  right: 100%;
+  margin-right: 15px;
+}
+
+.heading_with_lines > span:after
+{
+  left: 100%;
+  margin-left: 15px;
+}
+
+.required_data
+{
+  display: inline-block;
+  margin: 32px 0 9px 0;
+  font: 400 20px/1 'Open Sans', sans-serif;
+  color: #333;
+}
+
+.star
+{
+  font: 400 20px/1 'Open Sans', sans-serif;
+  color: red;
+}
+
+.cell
+{
+  width: 517px;
+  height: 44px;
+  font: 400 15px/1 'Open Sans', sans-serif;
+  color: #333;
+  border: 2px solid #c7c7c7;
+  border-radius: 3px;
+  margin: 0 0 -2px 1px;
+  padding-left: 19px;
+}
+
+.email
+{
+  margin-bottom: -1px;
+}
+
+.where_are_you_from
+{
+  margin-bottom: 10px;
+}
+
+.new-select-style
+{
+  position: relative;
+  margin: 0 0 47px 1px;
+  width: 540px;
+  height: 50px;
+}
+
+.arrow_image
+{
+  position: absolute;
+  top: 20px;
+  right: 18px;
+}
+
+.new-select-style select
+{
+  width: 540px;
+  height: 50px;
+  font: 400 18px/1.2 'Open Sans', sans-serif;
+  color: #333;
+  border: 2px solid #a6a6a6;
+  background: transparent;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  padding: 0 0 0 16px;
+}
+
+.new-select-style select:focus,
+.cell:focus,
+.message:focus
+{
+  border: 2px solid #15a98c;
+}
+
+.your_gender
+{
+  margin: 0 0 0 -2px;
+}
+
+.gender
+{
+  font: 400 18px/1 'Open Sans', sans-serif;
+  color: #333;
+  padding: 0 31px 0 1px;
+}
+
+.radio
+{
+  margin: 0 0 14px -4px;
+}
+
+.circle
+{
+  margin: 0 3px 0 5px;
+}
+
+.message
+{
+  padding: 15px 20px 5px 20px;
+  width: 497px;
+  height: 125px;
+  font: 400 18px/1.2 'Open Sans', sans-serif;
+  color: #333;
+  margin: 0 0 45px 0;
+  border: 2px solid #c7c7c7;
+  border-radius: 5px;
+  resize: none;
+}
+
+.submit_button
+{
+  margin-left: 0;
+}
+
+.footer
+{
+  font: 16px/70px Georgia;
+  color: #555;
+  width: 1920px;
+  height: 70px;
+  background-color: #f5f5f5;
+  padding-left: 592px;
+  margin-top: 47px;
+}

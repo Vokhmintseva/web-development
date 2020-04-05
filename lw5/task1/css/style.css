@@ -7,13 +7,13 @@
 .top_block
 {
   width: 960px;
-  margin: 0 0 48px;
+  margin-bottom: 49px;
 }
 
 .quote
 {
   width: 570px;
-  margin: 50px 0 0;
+  margin-top: 50px;
   float: right;
   background: url('../images/quotes.png') no-repeat;/*смещение относ-о лев.верх.угла контейнера*/
 }
@@ -22,7 +22,7 @@
 {
   text-align: left;
   font: italic 28px/43px Georgia;
-  margin: 68px 0 15px 60px;
+  margin: 68px 0 13px 60px;
   color: #848484;
 }
 
@@ -30,7 +30,7 @@
 {
   text-align: left;
   font: 600 16px/1 'Open Sans', sans-serif;
-  margin: 0 0 0 64px;
+  margin-bottom: 64px;
   color: #000;
 }
 
@@ -39,33 +39,25 @@
   clear: both;
 }
 
-.value
-{
-  text-decoration: underline;
-}
-
 .name_heading
 {
   text-align: left;
   font: 700 48px/1 'Open Sans', sans-serif;
-  margin: -7px 0 28px;
+  margin: -7px 0 27px;
   color: #333;
 }
 
-.authors_heading
+.favourites_heading
 {
   color: #15a98c;
   text-align: left;
   font: 600 24px/1 'Open Sans', sans-serif;
-  margin: 1px 0 16px;
+  margin-bottom: 17px;
 }
 
-.films_heading
+.movies_heading
 {
-  color: #15a98c;
-  text-align: left;
-  font: 600 24px/1 'Open Sans', sans-serif;
-  margin: 1px 0 13px;
+  margin-bottom: 14px;
 }
 
 .main_text
@@ -78,7 +70,7 @@
 .favourites
 {
   width: 330px;
-  margin: 0;
+  margin: -1px 6px 0 0;
   float: left;
 }
 
@@ -86,37 +78,43 @@
 {
   width: 60px;
   height: 7px;
-  margin: 0 0 42px;
+  margin-bottom: 42px;
   background: url('../images/rectangle.png') no-repeat;
 }
 
-.text
+.paragraph
 {
   font: 19px/32px Georgia;
   color: #555;
-  margin: 0 0 47px;
+  margin-bottom: 46px;
 }
 
 .hobbies_heading
 {
   font: 400 36px/1 'Open Sans', sans-serif;
   color: #333;
-  margin: 0 0 18px -3px;
+  margin: 0 0 18px -2px;
 }
 
 .favourites ul,
 .favourites ol
 {
-  margin: 0 0 46px -1px;
+  margin: -1px 0 46px -1px;
 }
 
 .reference
 {
+  /*position: relative;*/
   display: block;
-  padding: 31px 0 0 1px;
+  margin: 78px 0 135px 0;
   font: 19px/1.2 Georgia;
-  text-decoration: none;
   color: #15a98c;
+}
+
+.reference:after
+{
+  content: "\00A0\2192";
+  display: inline-block;
 }
 
 .photo
@@ -128,9 +126,16 @@
   border-radius: 5px;
 }
 
-.list li
+.list li,
+.list-numeric li
 {
   font: 19px/36px Georgia;
   color: #555;
-  margin: 0 0 0 -16px;
+  margin-left: -17px;
+  text-align: left;
+}
+
+.list-numeric li
+{
+  margin-left: -19px;
 }

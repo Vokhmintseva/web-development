@@ -1,7 +1,6 @@
-.main_block
+.body
 {
-  max-width: 1920px;
-  width: 100%;
+  width: 1920px;
   margin: 0 auto;
   position: relative;
 }
@@ -126,12 +125,12 @@
 
 .menu
 {
-  margin: 0;
+  margin: 0 920px 0 480px;
 }
 
 .menu ul
 {
-
+  width: 540px;
   height: 50px;
   list-style: none;
   margin: 0;
@@ -153,9 +152,7 @@
   text-decoration: none;
 }
 
-.icon:hover,
-.hobbies:hover,
-.favourite_movies:hover
+.icon:hover
 {
   background: #15a98c;
   color: #f5f5f5;
@@ -210,7 +207,7 @@
 .nature
 {
   background: url('../images/nature.png') no-repeat;
-  width: 100%;
+  width: 1920px;
   height: 402px;
   filter: brightness(50%);
 }
@@ -222,7 +219,7 @@
 
 .four_movies
 {
-
+  width: 1560px;
   height: 1002px;
   padding: 39px 0 0 360px;
   margin: 62px 0 48px 0;
@@ -416,6 +413,11 @@
   border: 2px solid #15a98c;
 }
 
+.error
+{
+  border: 2px solid #f00;
+}
+
 .your_gender
 {
   margin: 0 0 0 -2px;
@@ -460,9 +462,9 @@
 {
   font: 16px/70px Georgia;
   color: #555;
-
+  width: 1920px;
   height: 70px;
   background-color: #f5f5f5;
-
+  padding-left: 592px;
   margin-top: 47px;
 }

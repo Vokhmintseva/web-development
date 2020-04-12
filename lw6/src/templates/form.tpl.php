@@ -8,11 +8,12 @@
 </head>
 <body>
 <form method="POST" action="feedbacks.php" class="form">
-    <div>
-        <label for="email" class="required_data">Ваш email</label>
-        <input type="email" class="cell email <?php echo $args['emailError'] ?? ''; ?>" id="email" name="email" value="<?php echo $args['email'] ?? ''; ?>" required>
+    <div class="form-item">
+        <label for="email">Ваш email<span class="star"> *</span></label>
+        <input type="email" class="cell email <?php echo $args['emailError'] ?? ''; ?>" id="email" name="email"
+               value="<?php echo $args['email'] ?? ''; ?>" required>
     </div>
-    <input type="submit" class="button">
+    <input type="submit" class="button form_button">
 </form>
 </body>
 </html>

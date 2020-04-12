@@ -1,27 +1,26 @@
 function isPrimeNumber(n) {
-    let num = n;
-    if (Number.isInteger(num)) {
+    if (Number.isInteger(n)) {
         let value = true;
-        if (num <= 1) {
+        if (n <= 1) {
             value = false;
         }
-        for (let i = 3; i < num; i++) {
-            if (num % i == 0) {
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0) {
                 value = false;
                 break;
             }
         }
         if (value) {
-            console.log(num, 'is a prime number');
+            console.log(n, 'is a prime number');
         } else {
-            console.log(num, 'is not a prime number');
+            console.log(n, 'is not a prime number');
         }
-    } else if (Array.isArray(num)) {
-        let len = num.length;
+    } else if (Array.isArray(n)) {
+        let len = n.length;
         for (let i = 0; i < len; i++) {
-            isPrimeNumber(num[i]);
+            isPrimeNumber(n[i]);
         }
     } else {
-        console.log(num, 'is not a number');
+        console.log(n, 'is not a number');
     }
 }

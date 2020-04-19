@@ -1,492 +1,453 @@
 .body
 {
-  overflow-x: hidden;
-  margin-top: 0;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+.wrapper
+{
+    background: url('../images/nature.png') 50% 50px no-repeat,
+    url('../images/background.png') 50% 54.5% no-repeat,
+    url('../images/background2.png') 50% 100% no-repeat;
 }
 
 .main_block
 {
-  width: 1200px;
-  margin: 0 auto;
+    width: 1200px;
+    margin: 0 auto;
 }
 
 .clear
 {
-  clear: both;
+    clear: both;
 }
 
 .menu
 {
-  list-style: none;
-  margin: 0 0 0 81px;
+    list-style: none;
+    margin: 0 0 0 120px;
+    padding: 0;
 }
 
 .menu_items
 {
-  float: left;
+    float: left;
 }
 
 .icon,
 .hobbies,
 .favourite_movies
 {
-  display: block;
-  font: 19px/1 Georgia;
-  color: #555;
-  text-decoration: none;
-  padding: 15px 22px 15px 21px;
+    display: block;
+    font: 19px/1 Georgia;
+    color: #555;
+    text-decoration: none;
+    padding: 16px 21px 15px 21px;
 }
 
 .hobbies
 {
-  padding: 15px 21px 15px 21px;
+    padding: 16px 17px 15px 21px;
 }
 
 .favourite_movies
 {
-  padding: 15px 20px 15px 19px;
+    padding: 16px 22px 15px 23px;
 }
 
 .icon:hover,
 .hobbies:hover,
 .favourite_movies:hover
 {
-  background: #15a98c;
-  color: #f5f5f5;
+    background: #15a98c;
+    color: #f5f5f5;
 }
 
 .icon:before,
 .hobbies:before,
 .favourite_movies:before
 {
-  content: url(../images/about_me_icon.png);
-  display: inline-block;
-  padding: 0 10px 0 0;
+    content: url(../images/about_me_icon.png);
+    padding: 0 12px 0 0;
 }
 
 .hobbies:before
 {
-  content: url(../images/hobby_icon.png);
+
+    content: url(../images/hobby_icon.png);
+    padding: 0px 10px 0 0;
 }
 
 .favourite_movies:before
 {
-  content: url(../images/video_icon.png);
+    content: url(../images/video_icon.png);
+    padding: 1px 10px 0 0;
 }
 
 .icon:hover:before
 {
-  content: url(../images/about_me_icon_active.png);
+    content: url(../images/about_me_icon_active.png);
 }
 
 .hobbies:hover:before
 {
-  content: url(../images/hobby_icon_active.png);
+    content: url(../images/hobby_icon_active.png);
 }
 
 .favourite_movies:hover:before
 {
-  content: url(../images/video_icon_active.png);
-}
-
-.nature
-{
-  position: relative;
-  width: 1920px;
-  background: url('../images/nature.png') no-repeat;
-  transform: translateX(-50%);
-  margin-left: 50%;
-
+    content: url(../images/video_icon_active.png);
 }
 
 .main_content
 {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  margin: -194px 0 0 120px;
+    display: grid;
+    grid-template-columns: 34.375% 59.375%;
+    grid-column-gap: 60px;
+    margin: 210px 121px 0 120px;
 }
 
 .photo
 {
-  width: 330px;
-  height: 350px;
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 .favourites_heading
 {
-  color: #15a98c;
-  text-align: left;
-  font: 600 24px/1 'Open Sans', sans-serif;
-  margin: 45px 0 0 0;
+    color: #15a98c;
+    text-align: left;
+    font: 600 24px/1 'Open Sans', sans-serif;
+    margin: 45px 0 0 0;
 }
 
 .fav_movies_heading
 {
-  margin: 46px 0 16px 1px;
+    margin: 46px 0 16px 1px;
 }
 
 .list1
 {
-  padding-left: 22px;
+    padding-left: 22px;
 }
 
 .list2
 {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
-.fav_items,
-.items_numeric
+.fav_items
 {
-  text-align: left;
-  font: 19px/36px Georgia;
-  color: #555;
-}
-
-.items_numeric
-{
-  padding-left: 0px;
-}
-
-.left_column
-{
-  margin: 0 60px 0 0;
+    text-align: left;
+    font: 19px/36px Georgia;
+    color: #555;
 }
 
 .blockquote
 {
-  text-align: left;
-  font: italic 28px/43px Georgia;
-  color: #f5f5f5;
-  padding-right: 117px;
-  margin: 24px 0 14px 2px;
+    font: italic 28px/43px Georgia;
+    color: #f5f5f5;
+    margin: 25px 0px 13px 3px;
 }
 
 .cite
 {
-  display: block;
-  text-align: left;
-  font: 600 16px/1 'Open Sans', sans-serif;
-  color: #f5f5f5;
-  margin: 0 0 92px 5px;
+    display: block;
+    text-align: left;
+    font: 600 16px/1 'Open Sans', sans-serif;
+    color: #f5f5f5;
+    margin: 0 0 92px 5px;
 }
 
 .name_heading
 {
-  text-align: left;
-  font: 700 48px/1 'Open Sans', sans-serif;
-  color: #333;
-  margin: 0 0 28px 0px;
+    text-align: left;
+    font: 700 48px/1 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 28px 0;
 }
 
 .rectangle
 {
-  width: 60px;
-  height: 7px;
-  margin: 0 0 43px 0;
-  background: url('../images/rectangle.png') no-repeat;
+    width: 60px;
+    height: 7px;
+    margin: 0 0 43px 0;
+    background: url('../images/rectangle.png') no-repeat;
 }
 
 .paragraph
 {
-  font: 19px/32px Georgia;
-  color: #555;
-  margin-bottom: 45px;
+    font: 19px/32px Georgia;
+    color: #555;
+    margin-bottom: 45px;
 }
 
 .hobbies_heading
 {
-  font: 400 36px/1 'Open Sans', sans-serif;
-  color: #333;
-  margin: 0 0 18px -2px;
+    font: 400 36px/1 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 18px 0;
 }
 
 .reference
 {
-  display: block;
-  font: 19px/1.2 Georgia;
-  color: #15a98c;
-  margin: 46px 0 0 0;
+    display: block;
+    font: 19px/1.2 Georgia;
+    color: #15a98c;
 }
 
 .reference:after
 {
-  content: "\00A0\2192";
-  display: inline-block;
+    content: "\00A0\2192";
+    display: inline-block;
 }
 
 .four_movies
 {
-  margin: 100px 0 0 0px;
+    margin: 101px 0 0 0;
 }
 
 .four_movies_heading
 {
-  margin: 0 0 36px 0;
+    margin: 0 0 36px 0;
 }
 
 .movie_holder
 {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 277px;
 }
 
 .movie
 {
-  margin: 0 20px 0 0;
-}
-
-.last_movie
-{
-  margin: 0;
+    width: 23.75%;
 }
 
 .movie_image
 {
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 .name_of_the_movie
 {
-  font: 700 22px/1 'Open Sans', sans-serif;
-  margin: 24px 0 22px -2px;
-  color: #333;
+    font: 700 22px/1 'Open Sans', sans-serif;
+    margin: 24px 0 22px 0px;
+    color: #333;
 }
 
 .movies_description
 {
-  font: 16px/28px Georgia;
-  color: #555;
+    font: 16px/28px Georgia;
+    color: #555;
+}
+
+.butt
+{
+    text-align: center;
+    margin: 0 20px 0 0;
 }
 
 .button
 {
-  width: 220px;
-  height: 52px;
-  font: 19px/1 Georgia;
-  color: #15a98c;
-  background-color: white;
-  margin: 262px 0 0 480px;
-  border: 2px solid #15a98c;
-  padding: 0;
-  cursor: pointer;
-  border-radius: 5px;
+    font: 19px/1 Georgia;
+    color: #15a98c;
+    background-color: white;
+    border: 2px solid #15a98c;
+    padding: 12px 54px 13px 54px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .button:hover
 {
-  background: #15a98c;
-  color: #f5f5f5;
+    background: #15a98c;
+    color: #f5f5f5;
 }
 
 .write_me_heading
 {
-  position: relative;
-  font: 300 36px/1 'Open Sans', sans-serif;
-  color: #333;
-  padding: 0 10px 0 13px;
+    position: relative;
+    font: 300 36px/1 'Open Sans', sans-serif;
+    color: #333;
+    padding: 0 10px 0 13px;
+    text-align: center;
 }
 
 .heading_with_lines
 {
-  margin: 107px 0 0 459px;
+    text-align: center;
+    margin: 123px 13px 0 0;
 }
 
 .write_me_heading:before,
 .write_me_heading:after
 {
-  content: "";
-  position: absolute;
-  top: 50%; /*расстояние между верхней гранью элемента и верхней гранью родительского контейнера*/
-  width: 200px;
-  height: 1px;
-  background: #c2c2c2;
+    content: "";
+    position: absolute;
+    top: 50%; /*расстояние между верхней гранью элемента и верхней гранью родительского контейнера*/
+    width: 200px;
+    height: 1px;
+    background: #c2c2c2;
 }
 
 .write_me_heading:before
 {
-  right: 100%;
-  margin-right: 15px;
+    right: 100%;
+    margin-right: 15px;
 }
 
 .write_me_heading:after
 {
-  left: 100%;
-  margin-left: 15px;
+    left: 100%;
+    margin-left: 15px;
 }
 
 .form
 {
-  margin: 0 auto;
-  padding: 46px 300px 0 328px;
-}
-
-.required_data
-{
-  display: inline-block;
-  margin: 32px 0 8px 0;
-  font: 400 20px/1 'Open Sans', sans-serif;
-  color: #333;
+    margin: 0 auto;
+    padding: 47px 330px 0 328px;
 }
 
 .star
 {
-  font: 400 20px/1 'Open Sans', sans-serif;
-  color: red;
+    font: 400 20px/1 'Open Sans', sans-serif;
+    color: #f00;
 }
 
 .cell
 {
-  width: 517px;
-  height: 44px;
-  font: 400 15px/1 'Open Sans', sans-serif;
-  color: #333;
-  border: 2px solid #c7c7c7;
-  border-radius: 3px;
-  padding-left: 19px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    font: 400 15px/1 'Open Sans', sans-serif;
+    color: #333;
+    border: 2px solid #c7c7c7;
+    border-radius: 3px;
+    padding: 13px 19px 13px 19px;
 }
 
-.new-select-style
+.select
 {
-  width: 540px;
-  height: 50px;
-  margin-top: 9px;
+    width: 100%;
+    font: 400 18px/1.2 'Open Sans', sans-serif;
+    color: #333;
+    border: 2px solid #a6a6a6;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 5px;
+    padding: 12px 0 13px 16px;
+}
+
+.new_select_style
+{
+    border: 0;
+    padding: 0;
+    margin: 10px 0 0 0;
 }
 
 .arrow_image
 {
-  position: absolute;
-  top: 20px;
-  right: 18px;
-}
-
-.new-select-style select
-{
-  width: 540px;
-  height: 50px;
-  font: 400 18px/1.2 'Open Sans', sans-serif;
-  color: #333;
-  border: 2px solid #a6a6a6;
-  background: transparent;
-  -webkit-appearance: none;
-  border-radius: 5px;
-  padding: 0 0 0 16px;
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    z-index: -1;
 }
 
 .new-select-style select:focus,
 .cell:focus,
 .message:focus
 {
-  border: 2px solid #15a98c;
+    border: 2px solid #15a98c;
 }
 
 .error
 {
-  border: 2px solid #f00;
-}
-
-.radio
-{
-  margin: 0 0 14px 0px;
+    border: 2px solid #f00;
 }
 
 .circle
 {
-  margin: 4px 7px 0 0px;
+    margin: 4px 0 0 0;
 }
 
 .message
 {
-  padding: 15px 20px 5px 20px;
-  width: 497px;
-  height: 125px;
-  font: 400 18px/1.2 'Open Sans', sans-serif;
-  color: #333;
-  margin: 0 0 45px 0;
-  border: 2px solid #c7c7c7;
-  border-radius: 5px;
-  resize: none;
+    box-sizing: border-box;
+    padding: 5px 20px 5px 10px;
+    width: 100%;
+    height: 151px;
+    font: 400 18px/1.2 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 24px 0;
+    border: 2px solid #c7c7c7;
+    border-radius: 5px;
+    resize: none;
+}
+
+.form_item
+{
+    margin: 30px 0 0 2px;
+}
+
+.form_item_gender
+{
+    margin: 47px 0 49px 0;
+}
+
+.radio
+{
+    display: flex;
+    margin: 17px 0 0 3px;
+}
+
+.label
+{
+    display: block;
+    font: 400 20px/1 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 9px 0;
+}
+
+.label_country
+{
+    margin-top: 31px;
+}
+
+.label_gender
+{
+    margin-left: 2px;
+}
+
+.gender
+{
+    font: 400 18px/1 'Open Sans', sans-serif;
+    color: #333;
+    padding: 0 0 0 8px;
+    margin-right: 41px;
+}
+
+.gender_female
+{
+    padding-left: 7px;
 }
 
 .submit_button
 {
-  margin: 0;
-  margin-top: 1px;
-  margin-left: 1px;
+    padding: 13px 60px 13px 62px;
+    margin: 22px 0 39px 1px;
+}
+
+.form_cell
+{
+    width: 540px;
 }
 
 .footer
 {
-  font: 16px/70px Georgia;
-  color: #555;
-  width: 1920px;
-  height: 70px;
-  background-color: #f5f5f5;
-  margin-top: 47px;
-  padding: 0 233px;
-}
-
-.form-item
-{
-  margin-top: 31px;
-  margin-left: 2px;
-}
-
-.form-item .radio
-{
-  display: flex;
-  flex-direction: row;
-  margin-top: 17px;
-  margin-left: 3px;
-}
-
-.form-item legend,
-.form-item label
-{
-  font: 400 20px/1 'Open Sans', sans-serif;
-  color: #333;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.form-item-gender
-{
-  margin-top: 48px;
-  margin-left: 0px;
-}
-
-label.gender
-{
-  font: 400 18px/1 'Open Sans', sans-serif;
-  color: #333;
-  padding: 1px 32px 0 1px;
-  margin-right: 3px;
-}
-
-label.form-item-label-message
-{
-  margin-top: 40px;
-}
-
-.female_gender
-{
-  margin-left: 3px;
-}
-
-.gray_back
-{
-  z-index: -1;
-  position: absolute;
-  background-color: #f9f9f9;
-  top: 1200px;
-  left: 0;
-  right: 0;
-  height: 791px;
-}
-
-.form_button
-{
-  margin: 25px 0 0 0;
+    text-align: center;
+    font: 16px/70px Georgia;
+    color: #555;
+    padding-right: 21px;
 }

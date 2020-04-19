@@ -10,15 +10,13 @@ function getRequestMethod(): string
     return $_SERVER['REQUEST_METHOD'];
 }
 
-function isNameCorrect(string $nameKey): bool
+function isNameCorrect(string $name): bool
 {
-    $name = getPOSTParameter($nameKey);
-    return preg_match("/^[A-Za-zА-Яа-яЁё]+$/u", $name);
+   return preg_match("/^[A-Za-zА-Яа-яЁё]+$/u", $name);
 }
 
-function isEmailCorrect(string $emailKey): bool
+function isEmailCorrect(string $email): bool
 {
-    $email = getPOSTParameter($emailKey);
     return preg_match("/^.+@.+\..+$/", $email);
 }
 

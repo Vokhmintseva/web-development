@@ -203,7 +203,7 @@
 
 .four_movies
 {
-    margin: 101px 0 0 0;
+    width: 1200px;
 }
 
 .four_movies_heading
@@ -214,13 +214,14 @@
 .movie_holder
 {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    margin-bottom: 277px;
+    margin-bottom: 193px;
 }
 
 .movie
 {
-    width: 23.75%;
+    width: 285px;
 }
 
 .movie_image
@@ -241,10 +242,10 @@
     color: #555;
 }
 
-.button_field
+.butt
 {
     text-align: center;
-    margin: 0 20px 0 0;
+    margin: 84px 20px 0 0;
 }
 
 .button
@@ -450,4 +451,27 @@
     font: 16px/70px Georgia;
     color: #555;
     padding-right: 21px;
+}
+
+.movie_wrapper
+{
+    display: flex;
+    margin: 101px -112px -0 -123px;
+}
+
+.right_arrow,
+.left_arrow
+{
+    background: url(../images/left_arrow.png) no-repeat;
+    border-radius: 50%;
+    border: none;
+    padding: 35px;
+    outline: none;
+    margin: 137px 39px 0 14px;
+}
+
+.right_arrow
+{
+    background: url(../images/right_arrow.png) no-repeat;
+    margin: 138px 0 0 42px;
 }

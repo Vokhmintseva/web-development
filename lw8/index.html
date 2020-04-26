@@ -5,6 +5,8 @@
     <title>Информация о себе</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <script src="js/movie_description.js" defer></script>
+    <script src="js/carousel.js" defer></script>
   </head>
   <body class="body">
     <div class="wrapper">
@@ -52,47 +54,51 @@
             <a href="http://vk.com/id4014017" class="reference">Напиши мне</a>
           </div>
         </div>
-        <div class="four_movies">
-          <h2 id="favourite_movies" class="hobbies_heading four_movies_heading">Любимые фильмы</h2>
-          <div class="movie_holder">
-            <div class="movie">
-              <img src="images/stranger_things.png" alt="stranger_things" class="movie_image">
-              <h3 class="name_of_the_movie">Очень странные дела</h3>
-              <p class="movies_description">1980-е годы, тихий провинциальный американский городок. Благоприятное
-                течение местной жизни нарушает загадочное исчезновение подростка по имени Уилл. Выяснить обстоятельства дела
-                полны решимости родные мальчика и местный шериф, также события затрагивают лучшего друга Уилла –
-                Майка.
-              </p>
-            </div>
-            <div class="movie">
-              <img src="images/breaking_bad.png" alt="breaking_bad" class="movie_image">
-              <h3 class="name_of_the_movie">Во все тяжкие</h3>
-              <p class="movies_description">С целью оплаты лечения и обеспечения финансового будущего своей семьи
-                Уолтер Уайт решает заняться производством метамфетамина. Его напарником становится бывший ученик — Джесси
-                Пинкман. Вместе они находят домик на колёсах и отправляются в пустыню, чтобы приготовить первую партию
-                наркотика.
-              </p>
-            </div>
-            <div class="movie">
-              <img src="images/true_detective.png" alt="true_detective" class="movie_image">
-              <h3 class="name_of_the_movie">Настоящий детектив</h3>
-              <p class="movies_description">Действие разворачивается в районе известнякового плато Озарк,
-                расположенного одновременно в нескольких штатах. Детектив Уэйн Хейз совместно со следователем из
-                Арканзаса Роландом Уэстом пытаются разобраться в загадочном преступлении, растянувшемся на три
-                десятилетия.
-              </p>
-            </div>
-            <div class="movie">
-              <img src="images/suits.png" alt="suits" class="film_movie">
-              <h3 class="name_of_the_movie">Настоящий детектив</h3>
-              <p class="movies_description">Убегая после неудачной попытки сбыта наркотиков, юрист-самоучка Майк Росс,
-                выдающий себя за выпускника Гарварда, попадает на собеседование к одному из лучших адвокатов по
-                сделкам Нью-Йорка Харви Спектру.
-              </p>
+        <div class="movie_wrapper">
+          <div class="left_arrow_holder"><button class="left_arrow" id="left_arrow"></button></div>
+          <div class="four_movies">
+            <h2 id="favourite_movies" class="hobbies_heading four_movies_heading">Любимые фильмы</h2>
+            <div class="movie_holder" id="movie_holder">
+              <div class="movie" id="stranger_things">
+                <img src="images/stranger_things.png" alt="stranger_things" class="movie_image">
+                <h3 class="name_of_the_movie">Очень странные дела</h3>
+                <p class="movies_description">1980-е годы, тихий провинциальный американский городок. Благоприятное
+                  течение местной жизни нарушает загадочное исчезновение подростка по имени Уилл. Выяснить обстоятельства дела
+                  полны решимости родные мальчика и местный шериф, также события затрагивают лучшего друга Уилла –
+                  Майка.
+                </p>
+              </div>
+              <div class="movie" id="breaking_bad">
+                <img src="images/breaking_bad.png" alt="breaking_bad" class="movie_image">
+                <h3 class="name_of_the_movie">Во все тяжкие</h3>
+                <p class="movies_description">С целью оплаты лечения и обеспечения финансового будущего своей семьи
+                  Уолтер Уайт решает заняться производством метамфетамина. Его напарником становится бывший ученик — Джесси
+                  Пинкман. Вместе они находят домик на колёсах и отправляются в пустыню, чтобы приготовить первую партию
+                  наркотика.
+                </p>
+              </div>
+              <div class="movie" id="true_detective">
+                <img src="images/true_detective.png" alt="true_detective" class="movie_image">
+                <h3 class="name_of_the_movie">Настоящий детектив</h3>
+                <p class="movies_description">Действие разворачивается в районе известнякового плато Озарк,
+                  расположенного одновременно в нескольких штатах. Детектив Уэйн Хейз совместно со следователем из
+                  Арканзаса Роландом Уэстом пытаются разобраться в загадочном преступлении, растянувшемся на три
+                  десятилетия.
+                </p>
+              </div>
+              <div class="movie" id="suits">
+                <img src="images/suits.png" alt="suits" class="movie_image">
+                <h3 class="name_of_the_movie">Форс-мажоры</h3>
+                <p class="movies_description">Убегая после неудачной попытки сбыта наркотиков, юрист-самоучка Майк Росс,
+                  выдающий себя за выпускника Гарварда, попадает на собеседование к одному из лучших адвокатов по
+                  сделкам Нью-Йорка Харви Спектру.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="button_field"><a href="#favourite_movies" class="button">Все фильмы</a></div>
+          <div class="right_arrow_holder"><button id="right_arrow" class="right_arrow"></button></div>
         </div>
+        <div class="butt"><a href="#favourite_movies" class="button">Все фильмы</a></div>
         <div class="heading_with_lines">
           <span class="write_me_heading">НАПИШИ МНЕ</span>
         </div>

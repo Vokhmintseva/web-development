@@ -6,64 +6,61 @@ function run() {
 }
 
 function onScrollRight() {
-  let parentElement = document.getElementById('movie_holder');
-  let currentFirstChild = (parentElement.firstElementChild);
-  let newLastChildObjectIndex = getNewLastChildObjectIndex(currentFirstChild);
+  const parentElement = document.getElementById('movie_holder');
+  const currentFirstChild = (parentElement.firstElementChild);
+  const newLastChildObject = getNewLastChildObject(currentFirstChild);
   parentElement.removeChild(currentFirstChild);
-  let NewLastChild = createNewChild(newLastChildObjectIndex);
-  parentElement.appendChild(NewLastChild);
+  const newLastChild = createNewChild(newLastChildObject);
+  parentElement.appendChild(newLastChild);
 }
 
 function onScrollLeft() {
-  let parentElement = document.getElementById('movie_holder');
-  let currentLastChild = (parentElement.lastElementChild);
-  let newFirstChildObjectIndex = getNewFirstChildObjectIndex(currentLastChild);
+  const parentElement = document.getElementById('movie_holder');
+  const currentLastChild = (parentElement.lastElementChild);
+  const newFirstChildObject = getNewFirstChildObject(currentLastChild);
   parentElement.removeChild(currentLastChild);
-  let NewFirstChild = createNewChild(newFirstChildObjectIndex);
-  parentElement.prepend(NewFirstChild);
+  const newFirstChild = createNewChild(newFirstChildObject);
+  parentElement.prepend(newFirstChild);
 }
 
-function getNewLastChildObjectIndex(currentChild) { /*ScrollRight*/
+function getNewLastChildObject(currentChild) { /*ScrollRight*/
   const moviesShown = 4;
   const moviesArrLength = moviesArr.length;
-  let currentChildObjectIndex = getCurrentChildObjectIndex(currentChild);
+  const currentChildObjectIndex = getCurrentChildObjectIndex(currentChild);
   let newLastChildObjectIndex = currentChildObjectIndex + moviesShown;
   if (newLastChildObjectIndex >= moviesArrLength) {
     newLastChildObjectIndex = newLastChildObjectIndex - moviesArrLength;
   }
-  console.log(newLastChildObjectIndex);
-  return newLastChildObjectIndex;
+  return moviesArr[newLastChildObjectIndex];
 }
 
-function getNewFirstChildObjectIndex(currentChild) { /*ScrollLeft*/
+function getNewFirstChildObject(currentChild) { /*ScrollLeft*/
   const moviesShown = 4;
   const moviesArrLength = moviesArr.length;
-  let currentLastChildObjectIndex = getCurrentChildObjectIndex(currentChild);
+  const currentLastChildObjectIndex = getCurrentChildObjectIndex(currentChild);
   let newFirstChildObjectIndex = currentLastChildObjectIndex - moviesShown;
   if (currentLastChildObjectIndex < moviesShown) {
     newFirstChildObjectIndex = (currentLastChildObjectIndex - moviesShown + moviesArrLength);
-
   }
-  console.log(newFirstChildObjectIndex);
-  return newFirstChildObjectIndex;
+  return moviesArr[newFirstChildObjectIndex];
 }
 
 function getCurrentChildObjectIndex(currentChild) {
-  let currentChildId = currentChild.id;
-  let currentChildObject = moviesArr.find(item => item.id == currentChildId);
-  let currentChildObjectIndex = moviesArr.indexOf(currentChildObject);
+  const currentChildId = currentChild.id;
+  const currentChildObject = moviesArr.find(item => item.id == currentChildId);
+  const currentChildObjectIndex = moviesArr.indexOf(currentChildObject);
   return currentChildObjectIndex;
 }
 
-function createNewChild(newChildObjectIndex) {
-  let NewChild = document.createElement('div');
-  NewChild.classList.add('movie');
-  NewChild.id = `${moviesArr[newChildObjectIndex].id}`;
-  NewChild.innerHTML =
-  `<img src="${moviesArr[newChildObjectIndex].image}" alt="true_detective" class="movie_image">
-  <h3 class="name_of_the_movie">${moviesArr[newChildObjectIndex].title}</h3>
-  <p class="movies_description">${moviesArr[newChildObjectIndex].description}</p>`;
-  return NewChild;
+function createNewChild(newChildObject) {
+  const newChild = document.createElement('div');
+  newChild.classList.add('movie');
+  newChild.id = `${newChildObject.id}`;
+  newChild.innerHTML =
+  `<img src="${newChildObject.image}" alt="true_detective" class="movie_image">
+  <h3 class="name_of_the_movie">${newChildObject.title}</h3>
+  <p class="movies_description">${newChildObject.description}</p>`;
+  return newChild;
 }
 
 window.onload = run;

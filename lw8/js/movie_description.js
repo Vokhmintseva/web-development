@@ -1,4 +1,4 @@
-moviesArr = [
+const moviesArr = [
   {
     id: 'stranger_things',
     title: 'Очень странные дела',

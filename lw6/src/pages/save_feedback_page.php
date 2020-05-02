@@ -28,7 +28,7 @@ function fillTheArgsArray(string $name, string $email): array
 
 function saveFile(string $dir, string $fileName, array $associativeArray)
 {
-    if(!is_dir("../$dir"))
+    if (!is_dir("../$dir"))
     {
         mkdir("../$dir", 0777);
     }

@@ -1,19 +1,19 @@
 SELECT
     id,
-    lastname AS "Фамилия",
-    name AS "Имя",
-    middlename AS "Отчество",
-    age AS "Возраст"
+    last_name AS "Р¤Р°РјРёР»РёСЏ",
+    name AS "РРјСЏ",
+    middle_name AS "РћС‚С‡РµСЃС‚РІРѕ",
+    age AS "Р’РѕР·СЂР°СЃС‚"
 FROM                                   
     student
 WHERE
     age LIKE 19;
 
 SELECT
-    student.lastname AS "Фамилия",
-    student.name AS "Имя",
-    student.middlename AS "Отчество",
-    `group`.name AS "Группа"
+    student.last_name AS "Р¤Р°РјРёР»РёСЏ",
+    student.name AS "РРјСЏ",
+    student.middle_name AS "РћС‚С‡РµСЃС‚РІРѕ",
+    `group`.name AS "Р“СЂСѓРїРїР°"
 FROM
     `group`
 JOIN 
@@ -21,13 +21,13 @@ JOIN
 ON
     student.`group_id` = `group`.id
 WHERE
-    `group`.name = 'ФК-13';
+    `group`.name = 'Р¤Рљ-13';
 
 SELECT
-    student.lastname AS "Фамилия",
-    student.name AS "Имя",
-    student.middlename AS "Отчество",
-    faculty.name AS "Факультет"
+    student.last_name AS "Р¤Р°РјРёР»РёСЏ",
+    student.name AS "РРјСЏ",
+    student.middle_name AS "РћС‚С‡РµСЃС‚РІРѕ",
+    faculty.name AS "Р¤Р°РєСѓР»СЊС‚РµС‚"
 FROM
     faculty
 JOIN 
@@ -39,14 +39,14 @@ JOIN
 ON
     student.`group_id` = `group`.id 
 WHERE
-    faculty.name = 'Экономический факультет';
+    faculty.name = 'Р­РєРѕРЅРѕРјРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚';
 
 SELECT
-    student.lastname AS "Фамилия",
-    student.name AS "Имя",
-    student.middlename AS "Отчество",
-    faculty.name AS "Факультет",
-    `group`.name AS "Группа"
+    student.last_name AS "Р¤Р°РјРёР»РёСЏ",
+    student.name AS "РРјСЏ",
+    student.middle_name AS "РћС‚С‡РµСЃС‚РІРѕ",
+    faculty.name AS "Р¤Р°РєСѓР»СЊС‚РµС‚",
+    `group`.name AS "Р“СЂСѓРїРїР°"
 FROM
     student
 JOIN
@@ -58,4 +58,4 @@ JOIN
 ON
     faculty.id = `group`.faculty_id
 WHERE
-    student.lastname = 'Журавлев' AND student.name = 'Александр' AND student.middlename = 'Романович';
+    student.last_name = 'Р–СѓСЂР°РІР»РµРІ' AND student.name = 'РђР»РµРєСЃР°РЅРґСЂ' AND student.middle_name = 'Р РѕРјР°РЅРѕРІРёС‡';

@@ -1,0 +1,729 @@
+.body
+{
+    margin: 0;
+}
+
+.main_block
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.menu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.icon,
+.hobbies,
+.favourite_movies
+{
+    display: block;
+    font: 19px/1 Georgia;
+    color: #555;
+    text-decoration: none;
+    padding: 16px 21px 15px 21px;
+}
+
+.hobbies
+{
+    padding: 16px 17px 15px 21px;
+}
+
+.favourite_movies
+{
+    padding: 16px 22px 15px 23px;
+}
+
+.icon:hover,
+.hobbies:hover,
+.favourite_movies:hover
+{
+    background: #15a98c;
+    color: #f5f5f5;
+}
+
+.icon:before,
+.hobbies:before,
+.favourite_movies:before
+{
+    content: url(../images/about_me_icon.png);
+    padding: 0 12px 0 0;
+}
+
+.hobbies:before
+{
+
+    content: url(../images/hobby_icon.png);
+    padding: 0 10px 0 0;
+}
+
+.favourite_movies:before
+{
+    content: url(../images/video_icon.png);
+    padding: 1px 10px 0 0;
+}
+
+.icon:hover:before
+{
+    content: url(../images/about_me_icon_active.png);
+}
+
+.hobbies:hover:before
+{
+    content: url(../images/hobby_icon_active.png);
+}
+
+.favourite_movies:hover:before
+{
+    content: url(../images/video_icon_active.png);
+}
+
+.main_content
+{
+    padding: 0 5px 0 5px;
+}
+
+.photo
+{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.first_column
+{
+    margin: 45px 0 0 0;
+}
+
+.favourites_heading
+{
+    color: #15a98c;
+    text-align: left;
+    font: 600 24px/1 'Open Sans', sans-serif;
+    margin: 0 0 16px 0;
+}
+
+.list1
+{
+    padding-left: 22px;
+    margin: 0 0 46px 0;
+}
+
+.list2
+{
+    padding-left: 20px;
+}
+
+.fav_items
+{
+    text-align: left;
+    font: 19px/36px Georgia;
+    color: #555;
+}
+
+.cite
+{
+    display: none;
+}
+
+.cite_mobile
+{
+    margin: 0 0 20px 0;
+}
+
+.quote
+{
+    font: italic 28px/43px Georgia;
+    color: #555;
+    margin: 0 0 13px 0;
+}
+
+.author
+{
+    font: 600 16px/1 'Open Sans', sans-serif;
+    color: #555;
+}
+
+.name_heading
+{
+    text-align: left;
+    font: 700 30px/1 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 28px 0;
+}
+
+.rectangle
+{
+    width: 60px;
+    height: 7px;
+    background: url('../images/rectangle.png') no-repeat;
+}
+
+.paragraph
+{
+    font: 19px/32px Georgia;
+    color: #555;
+    margin: 0 0 44px 0;
+}
+
+.hobbies_heading
+{
+    font: 400 36px/1 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 19px 0;
+}
+
+.reference
+{
+    display: block;
+    font: 19px/1.2 Georgia;
+    color: #15a98c;
+}
+
+.reference:after
+{
+    content: "\00A0\2192";
+    display: inline-block;
+}
+
+.four_movies
+{
+    padding: 0 7px 0 7px;
+    margin: 20px 0 50px 0;
+}
+
+.four_movies_heading
+{
+    margin: 0 0 36px 0;
+}
+
+.movie_holder
+{
+    margin: 0 0 45px 0;
+}
+
+.movie
+{
+    width: 100%;
+}
+
+.movie_image
+{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.name_of_the_movie
+{
+    font: 700 22px/1 'Open Sans', sans-serif;
+    margin: 28px 0 22px 0;
+    color: #333;
+}
+
+.movies_description
+{
+    font: 16px/28px Georgia;
+    color: #555;
+}
+
+.button_field
+{
+    text-align: center;
+    margin: 0 19px 0 0;
+}
+
+.button
+{
+    font: 19px/1 Georgia;
+    color: #fff;
+    background-color: #15a98c;
+    border: 2px solid #15a98c;
+    padding: 12px 54px 13px 54px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover
+{
+    background: #15a98c;
+    color: #f5f5f5;
+}
+
+.write_me_heading
+{
+    position: relative;
+    font: 300 36px/1 'Open Sans', sans-serif;
+    color: #333;
+    padding: 0 10px 0 13px;
+    text-align: center;
+}
+
+.heading_with_lines
+{
+    text-align: center;
+}
+
+.write_me_heading:before,
+.write_me_heading:after
+{
+    content: "";
+    position: absolute;
+    top: 50%; /*расстояние между верхней гранью элемента и верхней гранью родительского контейнера*/
+    width: 15px;
+    height: 1px;
+    background: #c2c2c2;
+}
+
+.write_me_heading:before
+{
+    right: 98%;
+    margin-right: 5px;
+}
+
+.write_me_heading:after
+{
+    left: 98%;
+    margin-left: 5px;
+}
+
+.chart
+{
+    margin: 0 auto;
+    padding: 0 5px 0 5px;
+}
+
+.star
+{
+    font: 400 20px/1 'Open Sans', sans-serif;
+    color: #f00;
+}
+
+.cell
+{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    font: 400 15px/1 'Open Sans', sans-serif;
+    color: #333;
+    border: 2px solid #c7c7c7;
+    border-radius: 3px;
+    padding: 13px 19px 13px 19px;
+}
+
+.drop_down_list
+{
+    width: 100%;
+    font: 400 18px/1.2 'Open Sans', sans-serif;
+    color: #333;
+    border: 2px solid #a6a6a6;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 5px;
+    padding: 12px 0 13px 16px;
+}
+
+.new_select_style
+{
+    background: url('../images/arrow.png') 97% 51% no-repeat;
+    border: 0;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.new-select-style select:focus,
+.cell:focus,
+.message:focus
+{
+    border: 2px solid #15a98c;
+}
+
+.error
+{
+    border: 2px solid #f00;
+}
+
+.circle
+{
+    margin: 4px 0 0 0;
+}
+
+.message
+{
+    box-sizing: border-box;
+    padding: 5px 20px 5px 10px;
+    width: 100%;
+    height: 151px;
+    font: 400 18px/1.2 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 24px 0;
+    border: 2px solid #c7c7c7;
+    border-radius: 5px;
+    resize: none;
+}
+
+.form_item
+{
+    margin: 30px 0 0 2px;
+}
+
+.form_item_gender
+{
+    margin: 47px 0 49px 0;
+}
+
+.switch
+{
+    display: flex;
+    margin: 17px 0 0 3px;
+}
+
+.mark
+{
+    display: block;
+    font: 400 20px/1 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 9px 0;
+}
+
+.mark_country
+{
+    margin-top: 31px;
+}
+
+.mark_gender
+{
+    margin-left: 2px;
+}
+
+.gender
+{
+    font: 400 18px/1 'Open Sans', sans-serif;
+    color: #333;
+    padding: 0 0 0 8px;
+    margin-right: 41px;
+}
+
+.gender_female
+{
+    padding-left: 7px;
+}
+
+.submit_button
+{
+    padding: 14px 60px 14px 61px;
+    margin: 0 0 20px 1px;
+}
+
+.form_cell
+{
+    max-width: 540px;
+}
+
+.bottom
+{
+    text-align: center;
+    font: 16px/1.5 Georgia;
+    color: #555;
+    padding-right: 21px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px)
+{
+    .wrapper
+    {
+        background: url('../images/nature.png') 50% 50px/auto 230px no-repeat,
+        url('../images/background.png') 50% 54.5%/auto no-repeat,
+        url('../images/background2.png') 50% 100%/contain no-repeat;
+    }
+
+    .menu
+    {
+        margin-left: 120px;
+    }
+
+    .menu_items
+    {
+        float: left;
+    }
+
+    .main_content
+    {
+        padding: 0;
+    }
+
+    .photo
+    {
+        max-width: 27.5%;
+        float: left;
+        padding: 0 0 0 50px;
+        margin: 0 0 5px 0;
+    }
+
+    .cite_mobile
+    {
+        display: none;
+    }
+
+    .clear_tablet
+    {
+        clear: both;
+    }
+
+    .cite
+    {
+        display: block;
+        width: 47.5%;
+        float: right;
+        padding: 40px 50px 0 0;
+    }
+
+    .quote,
+    .author
+    {
+        color: #f5f5f5;
+    }
+
+    .name_heading
+    {
+        margin: 15px 0 15px 0;
+    }
+
+    .first_column
+    {
+        float: left;
+        width: 30%;
+        padding: 0 0 0 20px;
+    }
+
+    .list2
+    {
+        padding-left: 10px;
+    }
+
+    .second_column
+    {
+        float: right;
+        width: 60%;
+        padding: 0 20px 0 0;
+    }
+
+    .four_movies_heading
+    {
+        margin-top: 25px;
+    }
+
+    .movie
+    {
+        width: 48%;
+        float: left;
+        margin-right: 20px;
+    }
+
+    .movie_image
+    {
+        border-radius: 5px;
+        display: inline;
+        max-width: 100%;
+    }
+
+    .second_movie,
+    .last_movie
+    {
+        margin-right: 0px;
+    }
+
+    .movie_holder
+    {
+        margin: 0 0 20px 0;
+    }
+
+    .heading_with_lines
+    {
+        margin: 40px 13px 0 0;
+    }
+
+    .write_me_heading:before,
+    .write_me_heading:after
+    {
+         width: 200px;
+    }
+
+    .write_me_heading:before
+    {
+        right: 100%;
+        margin-right: 15px;
+    }
+
+    .write_me_heading:after
+    {
+        left: 100%;
+        margin-left: 15px;
+    }
+
+    .chart
+    {
+        padding: 10px 100px 0 100px;
+    }
+
+    .submit_button
+    {
+        margin: 20px 0 71px 1px;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .wrapper
+    {
+        background: url('../images/nature.png') 50% 50px/auto no-repeat,
+        url('../images/background.png') 50% 54.5%/auto no-repeat,
+        url('../images/background2.png') 50% 100%/auto no-repeat;
+    }
+
+    .menu
+    {
+        margin-left: 120px;
+    }
+
+    .menu_items
+    {
+        float: left;
+    }
+
+    .name
+    {
+        float: right;
+        padding: 0 211px 0 0;
+        margin: 0 0 43px 0;
+    }
+
+    .name_heading
+    {
+        font-size: 48px;
+    }
+
+    .main_content,
+    .four_movies
+    {
+        padding: 0;
+    }
+
+    .photo
+    {
+        float: left;
+        padding: 210px 0 0 120px;
+        margin: 0 0 5px 0px;
+    }
+
+    .cite_mobile
+    {
+        display: none;
+    }
+
+    .cite
+    {
+        display: block;
+        width: 47.5%;
+        float: right;
+        padding: 236px 115px 0 0;
+        margin: 0 0 90px 0;
+    }
+
+    .quote
+    {
+        color: #f5f5f5;
+    }
+
+    .author
+    {
+        color: #f5f5f5;
+        margin: 0 0 99px 0;
+    }
+
+    .first_column
+    {
+        float: left;
+        width: 27.5%;
+        padding: 0 0 0 120px;
+    }
+
+    list2
+    {
+        padding-left: 0px;
+    }
+
+    .second_column
+    {
+        float: right;
+        width: 47.5%;
+        padding: 0 121px 0 0;
+    }
+
+    .four_movies_heading
+    {
+        margin-top: 103px;
+    }
+
+    .movie
+    {
+        width: 23.75%;
+        float: left;
+        margin-right: 20px;
+    }
+
+    .last_movie
+    {
+        margin-right: 0px;
+    }
+
+    .movie_holder
+    {
+        margin: 0 0 278px 0;
+    }
+
+    .heading_with_lines
+    {
+        margin: 123px 13px 0 0;
+    }
+
+    .write_me_heading:before,
+    .write_me_heading:after
+    {
+        width: 200px;
+    }
+
+    .write_me_heading:before
+    {
+        right: 100%;
+        margin-right: 15px;
+    }
+
+    .write_me_heading:after
+    {
+        left: 100%;
+        margin-left: 15px;
+    }
+
+    .chart
+    {
+        padding: 47px 330px 0 328px;
+    }
+
+    .submit_button
+    {
+        margin: 20px 0 71px 1px;
+    }
+}

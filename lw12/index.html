@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <script src="js/carousel.js" defer></script>
   </head>
   <body class="body">
     <div class="wrapper">
@@ -18,20 +19,14 @@
         <div class="clear"></div>
         <div class="main_content">
           <img src="images/photo.png" alt="photo" class="photo">
-          <div class="cite">
-            <blockquote class="quote">Не ошибается тот, кто ничего не делает</blockquote>
-            <cite class="author">— Теодор Рузвельт</cite>
-          </div>
-          <div class="clear_tablet"></div>
           <div class="name">
             <h1 id="about_me" class="name_heading">Ольга Вохминцева</h1>
             <div class="rectangle"></div>
           </div>
-          <div class="cite_mobile">
+          <div class="cite">
             <blockquote class="quote">Не ошибается тот, кто ничего не делает</blockquote>
             <cite class="author">— Теодор Рузвельт</cite>
           </div>
-
           <div class="first_column">
             <div class="favourites_heading">Любимые писатели:</div>
             <ul class="list1">
@@ -63,11 +58,10 @@
             <a href="http://vk.com/id4014017" class="reference">Напиши мне</a>
           </div>
         </div>
-        <div class="clear"></div>
         <div class="four_movies">
           <h2 id="favourite_movies" class="hobbies_heading four_movies_heading">Любимые фильмы</h2>
-          <div class="movie_holder">
-            <div class="movie">
+          <div class="movie_holder" id="movie_holder">
+            <div class="movie" id="stranger_things">
               <img src="images/stranger_things.png" alt="stranger_things" class="movie_image">
               <h3 class="name_of_the_movie">Очень странные дела</h3>
               <p class="movies_description">1980-е годы, тихий провинциальный американский городок. Благоприятное
@@ -76,7 +70,7 @@
                 Майка.
               </p>
             </div>
-            <div class="movie second_movie">
+            <div class="movie" id="breaking_bad">
               <img src="images/breaking_bad.png" alt="breaking_bad" class="movie_image">
               <h3 class="name_of_the_movie">Во все тяжкие</h3>
               <p class="movies_description">С целью оплаты лечения и обеспечения финансового будущего своей семьи
@@ -85,7 +79,7 @@
                 наркотика.
               </p>
             </div>
-            <div class="movie">
+            <div class="movie" id="true_detective">
               <img src="images/true_detective.png" alt="true_detective" class="movie_image">
               <h3 class="name_of_the_movie">Настоящий детектив</h3>
               <p class="movies_description">Действие разворачивается в районе известнякового плато Озарк,
@@ -94,18 +88,21 @@
                 десятилетия.
               </p>
             </div>
-            <div class="movie last_movie">
-              <img src="images/suits.png" alt="suits" class="movie_image">
-              <h3 class="name_of_the_movie">Настоящий детектив</h3>
-              <p class="movies_description">Убегая после неудачной попытки сбыта наркотиков, юрист-самоучка Майк Росс,
-                выдающий себя за выпускника Гарварда, попадает на собеседование к одному из лучших адвокатов по
-                сделкам Нью-Йорка Харви Спектру.
+            <div class="movie" id="downton_abbey">
+              <img src="images/downton_abbey.png" alt="downton_abbey" class="movie_image">
+              <h3 class="name_of_the_movie">Аббатство Даунтон</h3>
+              <p class="movies_description">Главное событие в жизни каждого аристократа — прием правящего монарха в
+                родовом гнезде. Однако в череде изысканных раутов и светских церемоний кто-то из обитателей роскошного
+                особняка готовит покушение на короля.
               </p>
             </div>
-            <div class="clear"></div>
           </div>
-          <div class="button_field"><a href="#favourite_movies" class="button">Все фильмы</a></div>
+          <div class="arrows">
+            <div><button id="left_arrow" class="left_arrow" ></button></div>
+            <div><button id="right_arrow" class="right_arrow"></button></div>
+          </div>
         </div>
+        <div class="button_field"><a href="#favourite_movies" class="button">Все фильмы</a></div>
         <div class="heading_with_lines">
           <span class="write_me_heading">НАПИШИ МНЕ</span>
         </div>
@@ -121,7 +118,6 @@
           <div class="form_item">
             <label for="country" class="mark mark_country">Откуда вы?</label>
             <div class="cell new_select_style">
-              <!--<img src="images/arrow.png" alt="arrow" class="arrow_image">-->
               <select id="country" size="1" name="country" class="drop_down_list">
                 <option value="Russia" selected>Россия</option>
                 <option value="France">Франция</option>

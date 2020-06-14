@@ -14,11 +14,11 @@
     <div class="cell new_select_style">
       <img src="images/arrow.png" alt="arrow" class="arrow_image">
       <select id="country" size="1" name="country" class="select">
-        <option <?php if ($args['country'] === 'Russia' || is_null($args['country'])) echo 'selected'; ?>
+        <option <?php if (($args['country'] ?? '')=="Russia" || !isset($args['country'])) echo 'selected'; ?>
             value="Russia">Россия
         </option>
-        <option <?php if ($args['country'] === 'France') echo 'selected'; ?> value="France">Франция</option>
-        <option <?php if ($args['country'] === 'Italy') echo 'selected'; ?> value="Italy">Италия</option>
+        <option <?php if (($args['country'] ?? '')=="France") echo 'selected'; ?> value="France">Франция</option>
+        <option <?php if (($args['country'] ?? '')=="Italy") echo 'selected'; ?> value="Italy">Италия</option>
       </select>
     </div>
   </div>
@@ -26,11 +26,11 @@
     <div class="label label_gender">Ваш пол</div>
     <div class="radio">
       <input type="radio" name="gender" id="male"
-             value="male" <?php if ($args['gender'] === 'male' || is_null($args['gender'])) echo 'checked'; ?>
+             value="male" <?php if (($args['gender'] ?? '')=="male" || !isset($args['gender'])) echo 'checked'; ?>
              class="circle">
       <label for="male" class="gender">Мужской</label>
       <input type="radio" name="gender"
-             id="female" <?php if ($args['gender'] === 'female') echo 'checked'; ?>
+             id="female" <?php if (($args['gender'] ?? '')=="female") echo 'checked'; ?>
              value="female" class="circle">
       <label for="female" class="gender gender_female">Женский</label>
     </div>

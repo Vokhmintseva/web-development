@@ -9,16 +9,12 @@
     margin: 0 auto;
 }
 
-.clear
-{
-    clear: both;
-}
-
 .menu
 {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 40%;
 }
 
 .icon,
@@ -86,9 +82,18 @@
     content: url(../images/video_icon_active.png);
 }
 
+.clear
+{
+    clear: both;
+}
+
 .main_content
 {
-    padding: 0 5px 0 5px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    padding: 0 7px 0 7px;
 }
 
 .photo
@@ -97,6 +102,21 @@
     margin: 0 auto;
     max-width: 100%;
     border-radius: 5px;
+}
+
+.name_heading
+{
+    text-align: left;
+    font: 700 30px/1 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 28px 0;
+}
+
+.rectangle
+{
+    width: 60px;
+    height: 7px;
+    background: url('../images/rectangle.png') no-repeat;
 }
 
 .first_column
@@ -132,11 +152,6 @@
 
 .cite
 {
-    display: none;
-}
-
-.cite_mobile
-{
     margin: 0 0 20px 0;
 }
 
@@ -153,26 +168,11 @@
     color: #555;
 }
 
-.name_heading
-{
-    text-align: left;
-    font: 700 30px/1 'Open Sans', sans-serif;
-    color: #333;
-    margin: 0 0 28px 0;
-}
-
-.rectangle
-{
-    width: 60px;
-    height: 7px;
-    background: url('../images/rectangle.png') no-repeat;
-}
-
 .paragraph
 {
     font: 19px/32px Georgia;
     color: #555;
-    margin: 0 0 44px 0;
+    margin: 4px 0 44px 0;
 }
 
 .hobbies_heading
@@ -197,50 +197,80 @@
 
 .four_movies
 {
-    padding: 0 7px 0 7px;
-    margin: 20px 0 50px 0;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px 0 0 0;
 }
 
 .four_movies_heading
 {
-    margin: 0 0 36px 0;
+    margin: 0 0 36px 10px;
 }
 
 .movie_holder
 {
-    margin: 0 0 45px 0;
+    display: flex;
+    overflow: hidden;
 }
 
 .movie
 {
-    width: 100%;
+    flex: 0 0 100%; /*flex-grow, flex-shrink и flex-basis*/
 }
 
 .movie_image
 {
     display: block;
+    box-sizing: border-box;
     max-width: 100%;
-    margin: 0 auto;
     border-radius: 5px;
+    padding: 0 10px 0 10px;
 }
 
 .name_of_the_movie
 {
     font: 700 22px/1 'Open Sans', sans-serif;
-    margin: 28px 0 22px 0;
+    margin: 27px 0 22px 0;
     color: #333;
+    padding: 0 10px 0 10px;
 }
 
 .movies_description
 {
+    padding: 0 10px 0 10px;
     font: 16px/28px Georgia;
     color: #555;
+}
+
+.arrows
+{
+    display: flex;
+    margin: 0 auto 30px auto;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.right_arrow,
+.left_arrow
+{
+    width: 50px;
+    height: 50px;
+    background: url(../images/left_arrow.png) no-repeat;
+    background-size: 50px 50px;
+    border: none;
+    outline: none;
+}
+
+.right_arrow
+{
+    background: url(../images/right_arrow.png) no-repeat;
+    background-size: 50px 50px;
 }
 
 .button_field
 {
     text-align: center;
-    margin: 0 19px 0 0;
+    margin: 0 19px 40px 0;
 }
 
 .button
@@ -300,8 +330,37 @@
 
 .chart
 {
+    max-width: 542px;
     margin: 0 auto;
     padding: 0 5px 0 5px;
+}
+
+.form_item
+{
+    margin: 30px 0 0 2px;
+}
+
+.form_item_gender
+{
+    margin: 47px 0 49px 0;
+}
+
+.mark
+{
+    display: block;
+    font: 400 20px/1 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 0 9px 0;
+}
+
+.mark_country
+{
+    margin-top: 31px;
+}
+
+.mark_gender
+{
+    margin-left: 2px;
 }
 
 .star
@@ -322,6 +381,14 @@
     padding: 13px 19px 13px 19px;
 }
 
+.new_select_style
+{
+    background: url('../images/arrow.png') 97% 51% no-repeat;
+    border: 0;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
 .drop_down_list
 {
     width: 100%;
@@ -335,24 +402,23 @@
     padding: 12px 0 13px 16px;
 }
 
-.new_select_style
+.switch
 {
-    background: url('../images/arrow.png') 97% 51% no-repeat;
-    border: 0;
-    padding: 0;
-    margin: 10px 0 0 0;
+    display: flex;
+    margin: 17px 0 0 3px;
 }
 
-.new-select-style select:focus,
-.cell:focus,
-.message:focus
+.gender
 {
-    border: 2px solid #15a98c;
+    font: 400 18px/1 'Open Sans', sans-serif;
+    color: #333;
+    padding: 0 0 0 8px;
+    margin-right: 41px;
 }
 
-.error
+.gender_female
 {
-    border: 2px solid #f00;
+    padding-left: 7px;
 }
 
 .circle
@@ -374,51 +440,11 @@
     resize: none;
 }
 
-.form_item
+.new-select-style select:focus,
+.cell:focus,
+.message:focus
 {
-    margin: 30px 0 0 2px;
-}
-
-.form_item_gender
-{
-    margin: 47px 0 49px 0;
-}
-
-.switch
-{
-    display: flex;
-    margin: 17px 0 0 3px;
-}
-
-.mark
-{
-    display: block;
-    font: 400 20px/1 'Open Sans', sans-serif;
-    color: #333;
-    margin: 0 0 9px 0;
-}
-
-.mark_country
-{
-    margin-top: 31px;
-}
-
-.mark_gender
-{
-    margin-left: 2px;
-}
-
-.gender
-{
-    font: 400 18px/1 'Open Sans', sans-serif;
-    color: #333;
-    padding: 0 0 0 8px;
-    margin-right: 41px;
-}
-
-.gender_female
-{
-    padding-left: 7px;
+    border: 2px solid #15a98c;
 }
 
 .submit_button
@@ -427,9 +453,9 @@
     margin: 0 0 20px 1px;
 }
 
-.form_cell
+.error
 {
-    max-width: 540px;
+    border: 2px solid #f00;
 }
 
 .bottom
@@ -440,17 +466,27 @@
     padding-right: 21px;
 }
 
+@media screen and (min-width: 550px) and (max-width: 768px)
+{
+    .movie
+    {
+        display: block;
+        flex-basis: 50%;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1200px)
 {
     .wrapper
     {
-        background: url('../images/nature.png') 50% 50px/auto 230px no-repeat,
-        url('../images/background.png') 50% 54.5%/auto no-repeat,
+        background: url('../images/nature.png') 50% 50px/contain no-repeat,
+        url('../images/background.png') 50% 54.5%/contain no-repeat,
         url('../images/background2.png') 50% 100%/contain no-repeat;
     }
 
     .menu
     {
+        width: auto;
         margin-left: 120px;
     }
 
@@ -461,33 +497,31 @@
 
     .main_content
     {
-        padding: 0;
+        grid-template-columns: 40% 55%;
+        grid-template-rows: repeat(4, auto);
+        margin: 20px 40px 0 40px;
+        grid-column-gap: 5%;
     }
 
     .photo
     {
-        max-width: 27.5%;
-        float: left;
-        padding: 0 0 0 50px;
-        margin: 0 0 5px 0;
+        grid-area: 1 / 1 / 3 / 2;
     }
 
-    .cite_mobile
+    .name
     {
-        display: none;
+        grid-area: 3 / 1 / 4 / 2;
     }
 
-    .clear_tablet
+    .first_column
     {
-        clear: both;
+        grid-area: 4 / 1 / 5 / 2;
     }
 
     .cite
     {
-        display: block;
-        width: 47.5%;
-        float: right;
-        padding: 40px 50px 0 0;
+        grid-area: 1 / 2 / 2 / 3;
+        margin: 0 0 20% 0;
     }
 
     .quote,
@@ -496,58 +530,25 @@
         color: #f5f5f5;
     }
 
+    .second_column
+    {
+        grid-area: 2 / 2 / 5 / 3;
+    }
+
     .name_heading
     {
         margin: 15px 0 15px 0;
     }
 
-    .first_column
-    {
-        float: left;
-        width: 30%;
-        padding: 0 0 0 20px;
-    }
-
     .list2
-    {
-        padding-left: 10px;
-    }
-
-    .second_column
-    {
-        float: right;
-        width: 60%;
-        padding: 0 20px 0 0;
-    }
-
-    .four_movies_heading
-    {
-        margin-top: 25px;
-    }
+     {
+         padding-left: 10px;
+     }
 
     .movie
     {
-        width: 48%;
-        float: left;
-        margin-right: 20px;
-    }
-
-    .movie_image
-    {
-        border-radius: 5px;
-        display: inline;
-        max-width: 100%;
-    }
-
-    .second_movie,
-    .last_movie
-    {
-        margin-right: 0px;
-    }
-
-    .movie_holder
-    {
-        margin: 0 0 20px 0;
+        display: block;
+        flex: 0 0 33.33%;
     }
 
     .heading_with_lines
@@ -595,6 +596,7 @@
 
     .menu
     {
+        width: auto;
         margin-left: 120px;
     }
 
@@ -603,11 +605,26 @@
         float: left;
     }
 
+    .main_content
+    {
+        max-width: 75%;
+        box-sizing: content-box;
+        grid-template-columns: 36.7% 63.3%;
+        grid-template-rows: repeat(3, auto);
+        grid-column-gap: 6.5%;
+        padding: 0 10.08% 0 10%;
+    }
+
+    .photo
+    {
+        grid-area: 1 / 1 / 3 / 2;
+        margin: 210px 0 5px 0;
+    }
+
     .name
     {
-        float: right;
-        padding: 0 211px 0 0;
-        margin: 0 0 43px 0;
+        grid-area: 2 / 2 / 3 / 3;
+        margin: 0 0 0 0;
     }
 
     .name_heading
@@ -615,83 +632,57 @@
         font-size: 48px;
     }
 
-    .main_content,
-    .four_movies
+    .first_column
     {
-        padding: 0;
-    }
-
-    .photo
-    {
-        float: left;
-        padding: 210px 0 0 120px;
-        margin: 0 0 5px 0px;
-    }
-
-    .cite_mobile
-    {
-        display: none;
+        grid-area: 3 / 1 / 4 / 2;
     }
 
     .cite
     {
-        display: block;
-        width: 47.5%;
-        float: right;
-        padding: 236px 115px 0 0;
-        margin: 0 0 90px 0;
+        grid-area: 1 / 2 / 2 / 3;
+        margin: 236px 0 50px 8px;
     }
 
-    .quote
-    {
-        color: #f5f5f5;
-    }
-
+    .quote,
     .author
     {
         color: #f5f5f5;
-        margin: 0 0 99px 0;
-    }
-
-    .first_column
-    {
-        float: left;
-        width: 27.5%;
-        padding: 0 0 0 120px;
-    }
-
-    list2
-    {
-        padding-left: 0px;
     }
 
     .second_column
     {
-        float: right;
-        width: 47.5%;
-        padding: 0 121px 0 0;
+        grid-area: 3 / 2 / 4 / 3;
     }
 
     .four_movies_heading
     {
-        margin-top: 103px;
-    }
-
-    .movie
-    {
-        width: 23.75%;
-        float: left;
-        margin-right: 20px;
-    }
-
-    .last_movie
-    {
-        margin-right: 0px;
+        margin: 103px 0 36px 0;
     }
 
     .movie_holder
     {
-        margin: 0 0 278px 0;
+        margin-bottom: 278px;
+        justify-content: space-between;
+    }
+
+    .movie
+    {
+        display: block;
+        flex-basis: 25%;
+        max-width: 285px;
+        padding: 0;
+    }
+
+    .movie_image,
+    .name_of_the_movie,
+    .movies_description
+    {
+        padding: 0;
+    }
+
+    .arrows
+    {
+        display: none;
     }
 
     .heading_with_lines

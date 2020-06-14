@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Drawing</title>
+  </head>
+  <body class="body">
+   <canvas id="myCanvas" width="600px" height="700px"></canvas>
+  <script>
+    window.onload = () => {
+      const canvas = document.getElementById('myCanvas');
+      const context = canvas.getContext('2d');
+      /*линия*/
+      context.beginPath();
+      context.moveTo(5, 5);
+      context.lineTo(500, 60);
+      context.lineWidth = 3;
+      context.strokeStyle = '#b4241b';
+      context.stroke();
+
+      /*круг*/
+      context.beginPath();
+      context.arc(95, 50, 40, 0, 2 * Math.PI);
+      context.strokeStyle = '#20b41c';
+      context.stroke();
+
+      /*эллипс*/
+      context.beginPath();
+      context.ellipse(100, 100, 50, 75, Math.PI / 4, 0, 5 * Math.PI);
+      context.strokeStyle = '#b21bb4';
+      context.stroke();
+
+      /*ось эллипса*/
+      context.beginPath();
+      context.setLineDash([5, 5]);
+      context.moveTo(0, 200);
+      context.lineTo(200, 0);
+      context.stroke();
+
+    }
+  </script>
+  </body>
+</html>

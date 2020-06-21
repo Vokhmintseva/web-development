@@ -19,29 +19,13 @@
         <div class="clear"></div>
         <div class="main_content">
           <img src="images/photo.png" alt="photo" class="photo">
-          <div class="name">
-            <h1 id="about_me" class="name_heading">Ольга Вохминцева</h1>
-            <div class="rectangle"></div>
-          </div>
           <div class="cite">
             <blockquote class="quote">Не ошибается тот, кто ничего не делает</blockquote>
             <cite class="author">— Теодор Рузвельт</cite>
           </div>
-          <div class="first_column">
-            <div class="favourites_heading">Любимые писатели:</div>
-            <ul class="list1">
-              <li class="fav_items">Оскар Уайльд</li>
-              <li class="fav_items">Чарльз Диккенс</li>
-              <li class="fav_items">Джек Лондон</li>
-              <li class="fav_items">Михаил Лермонтов</li>
-            </ul>
-            <div class="favourites_heading">Любимые фильмы:</div>
-            <ol class="list2">
-              <li class="fav_items">Очень странные дела</li>
-              <li class="fav_items">Во все тяжкие</li>
-              <li class="fav_items">Настоящий детектив</li>
-              <li class="fav_items">Форс-Мажоры</li>
-            </ol>
+          <div class="name">
+            <h1 id="about_me" class="name_heading">Ольга Вохминцева</h1>
+            <div class="rectangle"></div>
           </div>
           <div class="second_column">
             <p class="paragraph">
@@ -55,22 +39,38 @@
               была родиной парового двигателя, прядильных машин, станков и новых технологий, используемых в металлургии.
               Смысл жизни, следовательно, творит данный закон внешнего мира.
             </p>
-            <a href="http://vk.com/id4014017" class="reference">Напиши мне</a>
           </div>
+          <div class="first_column">
+            <div class="favourites_heading">Любимые писатели:</div>
+            <ul class="list">
+              <li class="fav_items">Оскар Уайльд</li>
+              <li class="fav_items">Чарльз Диккенс</li>
+              <li class="fav_items">Джек Лондон</li>
+              <li class="fav_items">Михаил Лермонтов</li>
+            </ul>
+            <div class="favourites_heading">Любимые фильмы:</div>
+            <ol class="list movies_list">
+              <li class="fav_items">Очень странные дела</li>
+              <li class="fav_items">Во все тяжкие</li>
+              <li class="fav_items">Настоящий детектив</li>
+              <li class="fav_items">Форс-Мажоры</li>
+            </ol>
+          </div>
+          <a href="http://vk.com/id4014017" class="reference">Напиши мне</a>
         </div>
         <div class="four_movies">
           <h2 id="favourite_movies" class="hobbies_heading four_movies_heading">Любимые фильмы</h2>
           <div class="movie_holder" id="movie_holder">
-            <div class="movie" id="stranger_things">
+            <div class="movie" id="movie1">
               <img src="images/stranger_things.png" alt="stranger_things" class="movie_image">
               <h3 class="name_of_the_movie">Очень странные дела</h3>
-              <p class="movies_description">1980-е годы, тихий провинциальный американский городок. Благоприятное
-                течение местной жизни нарушает загадочное исчезновение подростка по имени Уилл. Выяснить обстоятельства дела
-                полны решимости родные мальчика и местный шериф, также события затрагивают лучшего друга Уилла –
-                Майка.
+              <p class="movies_description">1980-е годы, Северная Америка, штат Индиана, тихий провинциальный
+                американский городок. Благоприятноe течение местной жизни нарушает загадочное исчезновение подростка по
+                имени Уилл. Выяснить обстоятельства дела полны решимости родные мальчика и местный шериф, также события
+                затрагивают лучшего друга Уилла – Майка.
               </p>
             </div>
-            <div class="movie" id="breaking_bad">
+            <div class="movie" id="movie2">
               <img src="images/breaking_bad.png" alt="breaking_bad" class="movie_image">
               <h3 class="name_of_the_movie">Во все тяжкие</h3>
               <p class="movies_description">С целью оплаты лечения и обеспечения финансового будущего своей семьи
@@ -79,26 +79,33 @@
                 наркотика.
               </p>
             </div>
-            <div class="movie" id="true_detective">
+            <div class="movie" id="movie3">
               <img src="images/true_detective.png" alt="true_detective" class="movie_image">
               <h3 class="name_of_the_movie">Настоящий детектив</h3>
               <p class="movies_description">Действие разворачивается в районе известнякового плато Озарк,
-                расположенного одновременно в нескольких штатах. Детектив Уэйн Хейз совместно со следователем из
-                Арканзаса Роландом Уэстом пытаются разобраться в загадочном преступлении, растянувшемся на три
-                десятилетия.
+                расположенного одновременно в нескольких штатах. Детектив Уэйн Хейз совместно со следователем
+                пытаются разобраться в загадочном преступлении, растянувшемся на три
+                десятилетия. То, что начиналось как убийство, превратилось в сеть заговоров и махинаций.
               </p>
             </div>
-            <div class="movie" id="downton_abbey">
+            <div class="movie" id="movie4">
               <img src="images/downton_abbey.png" alt="downton_abbey" class="movie_image">
               <h3 class="name_of_the_movie">Аббатство Даунтон</h3>
-              <p class="movies_description">Главное событие в жизни каждого аристократа — прием правящего монарха в
-                родовом гнезде. Однако в череде изысканных раутов и светских церемоний кто-то из обитателей роскошного
-                особняка готовит покушение на короля.
+              <p class="movies_description"> «Аббатство Даунтон», или "Дайнтон" - исторический драматический
+                телесериал, созданный Джулианом Феллоузом. Главное событие в жизни каждого аристократа — прием правящего
+                монарха в родовом гнезде. Однако в череде изысканных раутов и светских церемоний кто-то из обитателей
+                роскошного особняка готовит покушение на короля.
               </p>
             </div>
           </div>
           <div class="arrows">
             <div><button id="left_arrow" class="left_arrow" ></button></div>
+            <div class="slider-dots">
+              <span class="slider-dots_item"></span>
+              <span class="slider-dots_item"></span>
+              <span class="slider-dots_item"></span>
+              <span class="slider-dots_item"></span>
+            </div>
             <div><button id="right_arrow" class="right_arrow"></button></div>
           </div>
         </div>
